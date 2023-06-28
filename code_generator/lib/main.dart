@@ -49,6 +49,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
     generateCode() {
       setState(() {});
     }
@@ -156,8 +158,8 @@ class _MyHomePageState extends State<MyHomePage> {
               errorBuilder: (context, error) => _controller.value.text.isEmpty
                   ? const Center(child: Text(errorText))
                   : Center(child: Text(error)),
-              width: 200,
-              height: 200,
+              width: width/2,
+              height: height/5,
             )
           ],
         ),
